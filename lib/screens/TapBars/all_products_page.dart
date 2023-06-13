@@ -55,28 +55,24 @@ class _AllProductsPageState extends State<AllProductsPage> {
 
             Row(
               children: [
-                Text("POPULAR COURSES",style: TextStyle(fontWeight: FontWeight.bold),),
+                Text("POPULAR COURSES",style: TextStyle(fontWeight: FontWeight.w800),),
               ],
             ),
 
 
 
 
-            SizedBox(
-              //height:ScreenConfig.blockHeight * 19,
-              //width: ScreenConfig.blockWidth * 100,
-              child: ListView.builder(
-                  shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context,index){
-                  return
-                     Padding(
-                      padding: EdgeInsets.only(bottom: 7.0,left: 11,right: 11,top: index==0?0:7),
-                      child: ProductCard(image: 'assets/images/image${index==0?2:3}.png',title: index==0?"Product Design":"Project Management"),
-                    );
-                },itemCount: 2,),
-            )
+            ListView.builder(
+                shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (context,index){
+                return
+                   Padding(
+                    padding: EdgeInsets.only(bottom: 7.0,left: 11,right: 11,top: index==0?0:7),
+                    child: ProductCard(image: 'assets/images/image${index==0?2:3}.png',title: index==0?"Product Design":"Project Management"),
+                  );
+              },itemCount: 2,)
 
 
           ],

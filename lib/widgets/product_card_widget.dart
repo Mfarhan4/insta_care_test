@@ -13,7 +13,7 @@ final String? totalPrice;
         decoration: BoxDecoration(color: Colors.white,border: Border.all(color: Colors.black,),borderRadius: BorderRadius.circular(20)),
 
         child: Padding(
-          padding: const EdgeInsets.only(left: 11.0,right: 0,top: 11,bottom: 0),
+          padding: const EdgeInsets.only(left: 11.0,right: 0,top: 0,bottom: 0),
           child: Stack(
             alignment: Alignment.bottomRight,
             children: [

@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
                                     width: 10,
                                   ),
                                   SizedBox(
-                                    width: ScreenConfig.blockWidth * 80,
+                                    width: ScreenConfig.blockWidth * 78,
                                     child: Padding(
                                       padding: const EdgeInsets.only(
                                           left: 14.0, right: 14, bottom: 10),
