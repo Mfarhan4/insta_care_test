@@ -18,15 +18,25 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixin {
   @override
-  late TabController _tabController;
+    late TabController _tabController;
 
   @override
-  void initState() {
+ initState()  {
     super.initState();
-    _tabController = TabController(length: tabs.length, vsync: this);
+    loadingF();
+_tabController = TabController(length: 6, vsync: this);
+    _tabController.addListener(() { });
   }
+loadingF()async{
+  loading=true;
+  await Future.delayed(Duration(seconds: 3));
+  setState(() {
+    loading=false;
+  });
 
+}
   final List<String> tabs = ['All', 'Design', 'Communication', 'Development', 'Design', 'Development'];
+  bool loading =false;
   final List<Widget> pages = [
     const AllProductsPage(),
     const Text("Design"),
@@ -46,7 +56,7 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
     ScreenConfig().init(context);
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Stack(
+        body:loading?Center(child: CircularProgressIndicator(),): Stack(
           children: [
             CustomScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
