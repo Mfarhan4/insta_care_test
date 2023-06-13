@@ -8,7 +8,7 @@ import '../config/screen_config.dart';
 import 'TapBars/all_products_page.dart';
 
 class HomePage extends StatefulWidget {
-  static const route = 'leads';
+
 
   const HomePage({Key? key}) : super(key: key);
 
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
                                     width: ScreenConfig.blockWidth * 80,
                                     child: Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 15.0, right: 15, bottom: 10),
+                                          left: 14.0, right: 14, bottom: 10),
                                       child: Stack(
                                         children: [
                                           TextFormField(
@@ -234,7 +234,7 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
                     children: [
                       const SizedBox(height: 20,),
                       SizedBox(
-                        height: 40.0,
+                        height: 35.0,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: tabs.length,
@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
 
                               },
                               child: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                                 alignment: Alignment.center,
                                 child: Container(
                                  // width: 110,
@@ -274,6 +274,8 @@ class _HomePageState extends State<HomePage>  with SingleTickerProviderStateMixi
                       Expanded(
                         child: TabBarView(
                           controller: _tabController,
+                          physics: NeverScrollableScrollPhysics(),
+
                           children: pages.map((page) {
                             return Center(
                               child: page,

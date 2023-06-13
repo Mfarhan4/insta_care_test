@@ -33,15 +33,15 @@ class _AllProductsPageState extends State<AllProductsPage> {
 
 
            SizedBox(
-             height:ScreenConfig.blockHeight * 19,
-             width: ScreenConfig.blockWidth * 100,
+             height:ScreenConfig.blockHeight * 16,
+            // width: ScreenConfig.blockWidth * 100,
              child: ListView.builder(
              //  shrinkWrap: true,
                scrollDirection: Axis.horizontal,
                itemBuilder: (context,index){
                return
                 const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 7.0),
+                  padding: EdgeInsets.symmetric(horizontal: 4.0),
                   child: ProductCard(image: 'assets/images/image1.png',title: 'Spoken English',totalPrice: '',),
                 );
              },itemCount: 5,),
@@ -58,7 +58,7 @@ class _AllProductsPageState extends State<AllProductsPage> {
                 Text("POPULAR COURSES",style: TextStyle(fontWeight: FontWeight.bold),),
               ],
             ),
-            const SizedBox(height: 1,),
+
 
 
 
@@ -72,7 +72,7 @@ class _AllProductsPageState extends State<AllProductsPage> {
                 itemBuilder: (context,index){
                   return
                      Padding(
-                      padding: EdgeInsets.symmetric(vertical: 7.0,horizontal: 11),
+                      padding: EdgeInsets.only(bottom: 7.0,left: 11,right: 11,top: index==0?0:7),
                       child: ProductCard(image: 'assets/images/image${index==0?2:3}.png',title: index==0?"Product Design":"Project Management"),
                     );
                 },itemCount: 2,),

@@ -5,29 +5,17 @@ import 'package:insta_task/screens/TapBars/all_products_page.dart';
 import 'package:insta_task/screens/home_page.dart';
 import 'package:insta_task/theme/palette.dart';
 
-// class BottomBarPage extends StatefulWidget {
-//   const BottomBarPage({Key? key}) : super(key: key);
-//
-//   @override
-//   State<BottomBarPage> createState() => _BottomBarPageState();
-// }
-//
-// class _BottomBarPageState extends State<BottomBarPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Placeholder();
-//   }
-// }
 
 
 
 
-class MyHomePage extends StatefulWidget {
+
+class BottomBarPage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _BottomBarPageState createState() => _BottomBarPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _BottomBarPageState extends State<BottomBarPage> {
   int _currentIndex = 0;
 
   void _onSelectedItem(int index) {
